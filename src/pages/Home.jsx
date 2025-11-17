@@ -57,7 +57,7 @@ const Home = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "199K",
+      price: "99K",
       features: [
         "Manajemen Produk",
         "Manajemen Stok",
@@ -71,7 +71,7 @@ const Home = () => {
     },
     {
       name: "Professional",
-      price: "499K",
+      price: "399K",
       popular: true,
       features: [
         "Semua fitur Starter",
@@ -122,7 +122,7 @@ const Home = () => {
             <HashLink
               smooth
               to="/demo#demo"
-              className="bg-blue-500 hover:bg-blue-600 border-2 border-blue-400 text-white hover:bg-blue-400/10 px-8 py-4 rounded-lg font-semibold transition"
+              className="bg-blue-500 hover:bg-blue-600 border-2 border-blue-400 text-white px-8 py-4 rounded-lg font-semibold transition"
             >
               Lihat Demo
             </HashLink>
