@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <Package className="w-8 h-8 text-blue-400" />
+              <img src='/logo-remove.png' className="w-20 text-blue-400" style={{marginRight: "-15px"}} />
               <span className="text-2xl font-bold text-white">MyGudang</span>
             </div>
             

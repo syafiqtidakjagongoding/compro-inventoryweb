@@ -13,8 +13,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <Package className="w-6 h-6 text-blue-400" />
-              <span className="text-xl font-bold text-white">MyGudang</span>
+               <img src='/logo-remove.png' className="w-20 text-blue-400" style={{marginRight: "-15px"}} />
+              <span className="text-2xl font-bold text-white">MyGudang</span>
             </div>
             <p className="text-gray-400">
               Solusi manajemen inventori terpercaya untuk bisnis modern
@@ -64,17 +64,17 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-blue-400" />
                 <a
-                  href="mailto:info@mygudang.com"
+                  href="mailto:mygudang213@gmail.com"
                   className="hover:text-blue-400 transition"
                 >
-                  info@mygudang.com
+                 mygudang213@gmail.com
                 </a>
               </li>
 
               <li className="flex items-center gap-3">
                 <Facebook size={18} className="text-blue-400" />
                 <a
-                  href="https://facebook.com/mygudang"
+                  href="https://web.facebook.com/people/MyGudang-Real/pfbid08xknt1vruxyNNzFutprRZHUL1BaKPpLSnaFK7M1jQBZNYJSxhc5UUqwDZUUbw8x4l/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-blue-400 transition"
@@ -98,7 +98,7 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-green-400" />
                 <a
-                  href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20bertanya%20tentang%20MyGudang"
+                  href="https://wa.me/62881026805589?text=Halo%20saya%20ingin%20bertanya%20tentang%20MyGudang"
                   target="_blank"
                   rel="noopener noreferrer"
                   className=""

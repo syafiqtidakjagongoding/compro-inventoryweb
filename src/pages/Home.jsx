@@ -235,7 +235,7 @@ const Home = () => {
             banyak bisnis berkembang di Indonesia.
           </p>
           <a
-            href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20bertanya%20tentang%20MyGudang"
+            href="https://wa.me/62881026805589?text=Halo%20saya%20ingin%20bertanya%20tentang%20MyGudang"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105 inline-block"
