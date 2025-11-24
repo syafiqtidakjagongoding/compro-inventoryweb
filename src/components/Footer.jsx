@@ -74,7 +74,7 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Facebook size={18} className="text-blue-400" />
                 <a
-                  href="https://web.facebook.com/people/MyGudang-Real/pfbid08xknt1vruxyNNzFutprRZHUL1BaKPpLSnaFK7M1jQBZNYJSxhc5UUqwDZUUbw8x4l/"
+                  href="https://web.facebook.com/profile.php?id=61584121352234"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-blue-400 transition"
