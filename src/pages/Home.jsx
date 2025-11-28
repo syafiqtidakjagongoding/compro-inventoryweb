@@ -1,12 +1,8 @@
-import React from "react";
 import {
   Package,
   BarChart3,
   Users,
   Shield,
-  Menu,
-  X,
-  ArrowRight,
   CheckCircle,
   Zap,
   TrendingUp,
