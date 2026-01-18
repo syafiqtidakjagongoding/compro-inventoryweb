@@ -6,6 +6,11 @@ import {
   CheckCircle,
   Zap,
   TrendingUp,
+  MapPin,
+  PackagePlus,
+  PackageMinus,
+  FileSpreadsheet,
+  CalendarClock
 } from "lucide-react";
 import { HashLink } from "react-router-hash-link";
 import About from "../components/About";
@@ -13,90 +18,87 @@ import About from "../components/About";
 const Home = () => {
   const features = [
     {
-      icon: <Package className="w-8 h-8" />,
-      title: "Manajemen Stok Real-Time",
+      icon: <PackagePlus className="w-8 h-8" />,
+      title: "Produk Masuk",
       description:
-        "Pantau inventori Anda secara real-time dengan sistem yang akurat dan mudah digunakan",
+        "Catat dan kelola barang masuk secara cepat dengan histori yang rapi dan akurat.",
+    },
+    {
+      icon: <PackageMinus className="w-8 h-8" />,
+      title: "Produk Keluar",
+      description:
+        "Pantau pergerakan barang keluar untuk penjualan atau distribusi secara real-time.",
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Manajemen Supplier",
+      description:
+        "Tambah dan kelola data supplier untuk memudahkan pengadaan dan pelacakan barang.",
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Laporan & Analitik",
       description:
-        "Dapatkan insight mendalam dengan dashboard analitik yang komprehensif",
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Multi-User Access",
-      description:
-        "Kolaborasi tim dengan sistem role dan permission yang fleksibel",
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Keamanan Terjamin",
-      description:
-        "Data Anda aman dengan enkripsi tingkat enterprise dan backup otomatis",
+        "Laporan stok, produk masuk/keluar, dan supplier dengan analitik yang mudah dipahami.",
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Otomasi Cerdas",
+      title: "Notifikasi Stok Rendah",
       description:
-        "Notifikasi otomatis untuk stok minimum dan peringatan penting lainnya",
+        "Dapatkan notifikasi otomatis saat stok mencapai batas minimum.",
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Skalabilitas",
+      icon: <FileSpreadsheet className="w-8 h-8" />,
+      title: "Export ke Excel",
       description:
-        "Berkembang bersama bisnis Anda dari skala kecil hingga enterprise",
+        "Export laporan dan data inventori ke format Excel untuk kebutuhan administrasi.",
+    },
+    {
+      icon: <CalendarClock className="w-8 h-8" />,
+      title: "Tanggal Kadaluarsa Produk",
+      description:
+        "Kelola tanggal kadaluarsa produk (opsional) lengkap dengan notifikasi sebelum habis.",
     },
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
+      name: "Offline (Local Web)",
       price: "99K",
       features: [
         "Manajemen Produk",
         "Manajemen Stok",
-        "Riwayat Barang Masuk/Keluar",
+        "Riwayat Produk Masuk & Keluar",
         "Kategori Produk",
-        "Export CSV",
-        "1 User",
-        "1 Gudang",
-        "Basic UI",
+        "Manajemen Lokasi",
+        "Laporan dan Analitik",
+        "Notifikasi Stok Rendah",
+        "Manajemen Kode / Barcode Produk",
+        "Pengecekan Tanggal Kadaluarsa",
+        "Akses Lokal (Tanpa Internet)",
       ],
     },
     {
-      name: "Professional",
-      price: "399K",
-      popular: true,
+      name: "Online Web",
+      price: "400K",
       features: [
-        "Semua fitur Starter",
-        "Dashboard Analytics",
-        "Multi User (up to 5)",
-        "Multi Gudang",
-        "Role & Permissions",
-        "Barcode Support",
-        "Notifikasi Stok Menipis",
-        "Import Excel",
-        "Backup Bulanan",
-        "UI Modern",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      features: [
-        "Semua fitur Professional",
-        "Unlimited Users",
-        "Unlimited Gudang",
-        "Custom Report",
-        "API Integration",
-        "Prioritas Support",
-        "On-premise Deployment",
-        "Audit Log & Security",
+        "Website Dapat Diakses dari Internet",
+        "Manajemen Produk",
+        "Manajemen Stok",
+        "Riwayat Produk Masuk & Keluar",
+        "Kategori Produk",
+        "Manajemen Lokasi",
+        "Laporan dan Analitik",
+        "Notifikasi Stok Rendah",
+        "Manajemen Kode / Barcode Produk",
+        "Pengecekan Tanggal Kadaluarsa",
+        "Multi-User & Role Management",
+        "Backup Data Cloud",
+        "Akses dari HP, Tablet, dan PC",
       ],
     },
   ];
+  
 
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -125,7 +127,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <About/>
+      <About />
 
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-slate-800/50">
@@ -168,7 +170,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 mx-auto max-w-5xl justify-center gap-8">
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
@@ -178,13 +180,6 @@ const Home = () => {
                     : "border-blue-500/20"
                 } relative`}
               >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Paling Populer
-                    </span>
-                  </div>
-                )}
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {plan.name}
                 </h3>
@@ -205,15 +200,6 @@ const Home = () => {
                     </li>
                   ))}
                 </ul>
-                <button
-                  className={`w-full py-3 rounded-lg font-semibold transition ${
-                    plan.popular
-                      ? "bg-blue-500 hover:bg-blue-600 text-white"
-                      : "bg-slate-800 hover:bg-slate-700 text-white border border-blue-500/30"
-                  }`}
-                >
-                  Pilih Paket
-                </button>
               </div>
             ))}
           </div>
